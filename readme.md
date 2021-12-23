@@ -6,7 +6,7 @@ Creating a home ventilation system (like HRV) using a Raspberry Pi, Node-RED and
 
 ## Wiring Diagram for the DS18B20
 
-![pi-to-hrv_bb](Jaycar DS18B20 - Raspberry Pi (Node-RED HRV).assets/pi-to-hrv_bb.svg)
+![pi-to-hrv-wiring](https://raw.githubusercontent.com/durankeeley/Jaycar-XC3700-DS18B20---Raspberry-Pi-Node-RED-HRV/main/Jaycar%20DS18B20%20-%20Raspberry%20Pi%20(Node-RED%20HRV).assets/pi-to-hrv_bb.svg)
 
 *Breadboard is not needed*
 
@@ -119,11 +119,11 @@ WantedBy=multi-user.target
 
 Flow:
 
-![image-20211223223125009](Jaycar DS18B20 - Raspberry Pi (Node-RED HRV).assets/image-20211223223125009.png)
+![image-20211223223125009](https://raw.githubusercontent.com/durankeeley/Jaycar-XC3700-DS18B20---Raspberry-Pi-Node-RED-HRV/main/Jaycar%20DS18B20%20-%20Raspberry%20Pi%20(Node-RED%20HRV).assets/image-20211223223125009.png)
 
 Dashboard
 
-![image-20211223223207236](Jaycar DS18B20 - Raspberry Pi (Node-RED HRV).assets/image-20211223223207236.png)
+![image-20211223223207236](https://raw.githubusercontent.com/durankeeley/Jaycar-XC3700-DS18B20---Raspberry-Pi-Node-RED-HRV/main/Jaycar%20DS18B20%20-%20Raspberry%20Pi%20(Node-RED%20HRV).assets/image-20211223223207236.png)
 
 ### Prerequisites
 
