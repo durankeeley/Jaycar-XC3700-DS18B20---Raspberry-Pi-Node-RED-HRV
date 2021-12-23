@@ -1,0 +1,580 @@
+[
+    {
+        "id": "da3d2068.f2cb1",
+        "type": "tab",
+        "label": "HRV",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ac7a2e96.0ec",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3a9fabd8.d21c14",
+        "type": "ui_tab",
+        "name": "HRV",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "95a1bb37.dec018",
+        "type": "ui_group",
+        "name": "Temp",
+        "tab": "3a9fabd8.d21c14",
+        "order": 4,
+        "disp": true,
+        "width": 8,
+        "collapse": true
+    },
+    {
+        "id": "b30b5cc6.b96e9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "56a03258.f40f5c",
+        "type": "tasmota-mqtt-broker",
+        "name": "pi-mqtt",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "keepalive": "60",
+        "cleansession": true
+    },
+    {
+        "id": "8af7aa3d.424678",
+        "type": "mqtt in",
+        "z": "da3d2068.f2cb1",
+        "name": "Temp1",
+        "topic": "temperature/sensor-011441c00aaa",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "ac7a2e96.0ec",
+        "nl": false,
+        "rap": false,
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "30713e47.a9cb72",
+                "58ccf90a.a254e8",
+                "ce9b5e7b.bba06"
+            ]
+        ]
+    },
+    {
+        "id": "10c3a134.c6cacf",
+        "type": "mqtt in",
+        "z": "da3d2068.f2cb1",
+        "name": "Temp2",
+        "topic": "temperature/sensor-2029ab000a85",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "ac7a2e96.0ec",
+        "nl": false,
+        "rap": false,
+        "x": 170,
+        "y": 460,
+        "wires": [
+            [
+                "ec403999.f92d38",
+                "6e4893b6.19ca4c",
+                "ce9b5e7b.bba06"
+            ]
+        ]
+    },
+    {
+        "id": "30713e47.a9cb72",
+        "type": "change",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Inside Temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 400,
+        "wires": [
+            [
+                "3df88a7.2675d76",
+                "2a5e650f.4c8f8a"
+            ]
+        ]
+    },
+    {
+        "id": "ec403999.f92d38",
+        "type": "change",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Roof Temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 440,
+        "wires": [
+            [
+                "3df88a7.2675d76",
+                "2a5e650f.4c8f8a"
+            ]
+        ]
+    },
+    {
+        "id": "af8765b0.4b3a58",
+        "type": "change",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.tempc",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Outside Temperature",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 560,
+        "wires": [
+            [
+                "3df88a7.2675d76"
+            ]
+        ]
+    },
+    {
+        "id": "2a5e650f.4c8f8a",
+        "type": "join",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "5aa4f24b.bb04bc"
+            ]
+        ]
+    },
+    {
+        "id": "5aa4f24b.bb04bc",
+        "type": "function",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "func": "if (flow.get(\"hrv_override\") == 'undefined') {\n    flow.set(\"hrv_override\", \"hrv_automatic\");\n}\n\nif (msg.payload == \"hrv_automatic\") {\n    flow.set(\"hrv_override\", \"hrv_automatic\");\n}\n\nif (msg.payload == \"hrv_always_on\") {\n    flow.set(\"hrv_override\", \"hrv_always_on\");\n}\n\nif (msg.payload == \"hrv_always_off\") {\n    flow.set(\"hrv_override\", \"hrv_always_off\");\n}\n\nif (msg.payload[0].topic === 'Inside Temperature') {\n    var inside_temp_topic = msg.payload[0].topic;\n    var inside_temp = Number(msg.payload[0].payload);\n    var roof_temp_topic = msg.payload[1].topic;\n    var roof_temp = Number(msg.payload[1].payload);\n} else if (msg.payload[0].topic === 'Roof Temperature') {\n    var roof_temp_topic = msg.payload[0].topic;\n    var roof_temp = Number(msg.payload[0].payload);\n    var inside_temp_topic = msg.payload[1].topic;\n    var inside_temp = Number(msg.payload[1].payload);\n}\n\nif (flow.get(\"hrv_override\") == \"hrv_automatic\") {\n    if (roof_temp >= inside_temp) {\n        msg.topic = \"Turn on HRV\";\n        msg.payload = true;\n        return msg;\n    } else if (roof_temp < inside_temp) {\n        msg.topic = \"Turn off HRV\";\n        msg.payload = false;\n        return msg;\n    }\n}\n\nif (flow.get(\"hrv_override\") == \"hrv_always_on\") {\n        msg.topic = \"HRV Override Always ON\";\n        msg.payload = true;\n        return msg;\n} \n\nif (flow.get(\"hrv_override\") == \"hrv_always_off\") {\n        msg.topic = \"HRV Override Always OFF\";\n        msg.payload = false;\n        return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 860,
+        "y": 460,
+        "wires": [
+            [
+                "55707c06.6ea594",
+                "933850ce.9fb6"
+            ]
+        ]
+    },
+    {
+        "id": "3ba18e7.7db5772",
+        "type": "ui_dropdown",
+        "z": "da3d2068.f2cb1",
+        "name": "HRV Override",
+        "label": "HRV Override",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "95a1bb37.dec018",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Automatic",
+                "value": "hrv_automatic",
+                "type": "str"
+            },
+            {
+                "label": "On",
+                "value": "hrv_always_on",
+                "type": "str"
+            },
+            {
+                "label": "Off",
+                "value": "hrv_always_off",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "hrv_override",
+        "topicType": "msg",
+        "x": 720,
+        "y": 400,
+        "wires": [
+            [
+                "5aa4f24b.bb04bc"
+            ]
+        ]
+    },
+    {
+        "id": "55707c06.6ea594",
+        "type": "ui_switch",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "label": "HRV",
+        "tooltip": "",
+        "group": "95a1bb37.dec018",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "switch1",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "x": 990,
+        "y": 460,
+        "wires": [
+            [
+                "f8153957.490908",
+                "933850ce.9fb6"
+            ]
+        ]
+    },
+    {
+        "id": "58ccf90a.a254e8",
+        "type": "ui_text",
+        "z": "da3d2068.f2cb1",
+        "group": "95a1bb37.dec018",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "<i class=\"fa fa-cutlery\" aria-hidden=\"true\"></i> Temp 1",
+        "format": "{{msg.payload | number:0}}°C",
+        "layout": "row-left",
+        "x": 510,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "6e4893b6.19ca4c",
+        "type": "ui_text",
+        "z": "da3d2068.f2cb1",
+        "group": "95a1bb37.dec018",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "<i class=\"fa fa-bed\" aria-hidden=\"true\"></i> Temp 2",
+        "format": "{{msg.payload | number:0}}°C",
+        "layout": "row-left",
+        "x": 490,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "fc32fa2c.698cb8",
+        "type": "ui_text",
+        "z": "da3d2068.f2cb1",
+        "group": "95a1bb37.dec018",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": " <i class=\"fa fa-thermometer-full\" aria-hidden=\"true\"></i> Outside Temprature",
+        "format": "{{msg.payload.tempc | number:0}}°C",
+        "layout": "row-left",
+        "x": 570,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3df88a7.2675d76",
+        "type": "ui_chart",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "group": "95a1bb37.dec018",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature History",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "7",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#afe9c5",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 600,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8448c366.151c4",
+        "type": "openweathermap in",
+        "z": "da3d2068.f2cb1",
+        "name": "Current Weather",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Christchurch",
+        "country": "NZ",
+        "language": "en",
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "fc32fa2c.698cb8",
+                "af8765b0.4b3a58"
+            ]
+        ]
+    },
+    {
+        "id": "f8153957.490908",
+        "type": "Tasmota Switch",
+        "z": "da3d2068.f2cb1",
+        "broker": "56a03258.f40f5c",
+        "device": "tasmota_6C038A",
+        "name": "arlec-twin-tasmota",
+        "outputs": 1,
+        "uidisabler": true,
+        "fullTopic": "",
+        "cmndPrefix": "",
+        "statPrefix": "",
+        "telePrefix": "",
+        "qos": 1,
+        "retain": false,
+        "x": 1170,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ce9b5e7b.bba06",
+        "type": "debug",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "933850ce.9fb6",
+        "type": "debug",
+        "z": "da3d2068.f2cb1",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 420,
+        "wires": []
+    }
+]
